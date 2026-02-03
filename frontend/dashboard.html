@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Dashboard</title>
+</head>
+<body>
+    <h2>Welcome to Dashboard</h2>
+
+    <p>User ID: <span id="uid"></span></p>
+    <p>Role: <span id="role"></span></p>
+
+    <script>
+    const uid = localStorage.getItem("user_id");
+    if (!uid) {
+        window.location.href = "login.html";
+    }
+
+    document.getElementById("uid").innerText = uid;
+    document.getElementById("role").innerText = localStorage.getItem("role");
+</script>
+
+
+
+</body>
+
+    
+
+</html>
